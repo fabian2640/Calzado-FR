@@ -1,4 +1,4 @@
-// Inicializamos el carrito como un array vacío
+// Inicializa el carrito como un array vacío
 let carrito = [];
 
 // Función para actualizar el carrito en la interfaz
@@ -6,13 +6,9 @@ function actualizarCarrito() {
     const contenedorItemsCarrito = document.getElementById('items-carrito');
     const elementoPrecioTotal = document.getElementById('precio-total');
     
-    // Limpiamos el contenedor del carrito
     contenedorItemsCarrito.innerHTML = '';
     
-    // Calculamos el total
     let total = 0;
-
-    // Iteramos sobre los artículos en el carrito
     carrito.forEach((item, index) => {
         const divItem = document.createElement('div');
         divItem.innerHTML = `
@@ -23,10 +19,9 @@ function actualizarCarrito() {
             <button onclick="eliminarDelCarrito(${index})">Eliminar</button>
         `;
         contenedorItemsCarrito.appendChild(divItem);
-        total += item.precio * item.cantidad; // Calculamos el total
+        total += item.precio * item.cantidad;
     });
     
-    // Actualizamos el total en la interfaz
     elementoPrecioTotal.innerText = `Total: $${total}`;
 }
 
@@ -35,54 +30,54 @@ function agregarAlCarrito(producto) {
     const itemExistente = carrito.find(item => item.nombre === producto.nombre);
     
     if (itemExistente) {
-        itemExistente.cantidad += 1; // Aumentamos la cantidad si ya existe
+        itemExistente.cantidad += 1;
     } else {
-        carrito.push({ ...producto, cantidad: 1, imagen: producto.imagen }); // Agregamos el nuevo artículo
+        carrito.push({ ...producto, cantidad: 1, imagen: producto.imagen });
     }
     
-    actualizarCarrito(); // Actualizamos el carrito en la interfaz
+    actualizarCarrito(); 
 }
 
 // Función para eliminar un artículo del carrito
 function eliminarDelCarrito(index) {
-    carrito.splice(index, 1); // Eliminamos el artículo del carrito
-    actualizarCarrito(); // Actualizamos el carrito en la interfaz
+    carrito.splice(index, 1); 
+    actualizarCarrito(); 
 }
 
 // Función para aumentar la cantidad de un artículo
 function aumentarCantidad(index) {
-    carrito[index].cantidad += 1; // Aumentamos la cantidad
-    actualizarCarrito(); // Actualizamos el carrito en la interfaz
+    carrito[index].cantidad += 1; 
+    actualizarCarrito();
 }
 
 // Función para disminuir la cantidad de un artículo
 function disminuirCantidad(index) {
     if (carrito[index].cantidad > 1) {
-        carrito[index].cantidad -= 1; // Disminuimos la cantidad
+        carrito[index].cantidad -= 1; 
     } else {
-        eliminarDelCarrito(index); // Si la cantidad es 1, eliminamos el artículo
+        eliminarDelCarrito(index); 
     }
-    actualizarCarrito(); // Actualizamos el carrito en la interfaz
+    actualizarCarrito(); 
 }
 
 // Función para vaciar el carrito al pagar
 function pagar() {
-    carrito = []; // Vaciamos el carrito
-    actualizarCarrito(); // Actualizamos el carrito en la interfaz
+    carrito = []; 
+    actualizarCarrito(); 
 }
 
-// Agregamos los event listeners a los botones de agregar al carrito
+// Agrega los event listeners a los botones de agregar al carrito
 document.querySelectorAll('.agregar-al-carrito').forEach(boton => {
     boton.addEventListener('click', (event) => {
-        const elementoProducto = event.target.parentElement; // Obtenemos el elemento del producto
+        const elementoProducto = event.target.parentElement; 
         const producto = {
             nombre: elementoProducto.getAttribute('data-nombre'),
             precio: parseFloat(elementoProducto.getAttribute('data-precio')),
-            imagen: elementoProducto.querySelector('img').src // Obtenemos la imagen del producto
+            imagen: elementoProducto.querySelector('img').src 
         };
-        agregarAlCarrito(producto); // Llamamos a la función para agregar al carrito
+        agregarAlCarrito(producto);
     });
 });
 
-// Agregamos el event listener al botón de pagar
+// Agrega el event listener al botón de pagar
 document.getElementById('pagar').addEventListener('click', pagar);
