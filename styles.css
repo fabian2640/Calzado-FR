@@ -22,13 +22,13 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 2.5em; /* Tamaño de fuente para pantallas grandes */
+    font-size: 2.5em;
 }
 
 /* Estilos del main */
 main {
     display: grid;
-    grid-template-columns: 1fr 300px; /* Columna para productos y columna para carrito */
+    grid-template-columns: 1fr 300px; 
     gap: 20px;
     padding: 20px;
 }
@@ -36,13 +36,13 @@ main {
 /* Estilos de los productos */
 .productos {
     display: flex;
-    flex-wrap: wrap; /* Permite que los productos se ajusten en varias filas */
-    justify-content: center; /* Centra los productos horizontalmente */
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
 .titulo-productos {
-    text-align: center; /* Centrar el título de productos */
-    width: 100%; /* Asegura que el título ocupe todo el ancho */
+    text-align: center; 
+    width: 100%; 
 }
 
 /* Ajustar el diseño de los productos para que estén uno al lado del otro */
@@ -50,9 +50,9 @@ main {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-    max-width: 200px; /* Limitar el ancho de los cuadros */
-    flex: 1 1 200px; /* Permite que los productos se ajusten en el espacio disponible */
-    margin: 10px; /* Espacio entre los productos */
+    max-width: 200px; 
+    flex: 1 1 200px; 
+    margin: 10px;
 }
 
 .imagen-producto {
@@ -62,47 +62,47 @@ main {
 
 /* Estilos de los botones */
 button {
-    background-color: black; /* Color de fondo negro para los botones */
-    color: white; /* Color de texto blanco */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px 15px; /* Espaciado interno */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    margin-top: 10px; /* Espacio superior para los botones */
+    background-color: black; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px; 
 }
 
 #pagar {
-    background-color: blue; /* Color de fondo azul para el botón de pagar */
+    background-color: blue; 
 }
 
 /* Estilos del carrito */
 .carrito {
     border: 1px solid #ccc;
     padding: 10px;
-    overflow-y: auto; /* Permite el desplazamiento si hay muchos artículos */
-    max-height: 600px; /* Altura máxima del carrito */
+    overflow-y: auto;
+    max-height: 600px; 
 }
 
 /* Estilos para los elementos del carrito */
 .item-carrito {
-    display: flex; /* Usamos flexbox para alinear la imagen y el texto */
-    align-items: center; /* Centra verticalmente los elementos */
-    margin-bottom: 10px; /* Espacio entre los artículos del carrito */
+    display: flex; 
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .item-carrito img {
-    width: 25px; /* Ancho fijo para la imagen del producto (ajustado a 25px) */
-    height: auto; /* Mantiene la proporción de la imagen */
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    width: 25px; 
+    height: auto; 
+    margin-right: 10px; 
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .nombre-tienda {
-        font-size: 1.5em; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+        font-size: 1.5em; 
     }
     main {
-        grid-template-columns: 1fr; /* En pantallas pequeñas, el carrito ocupa toda la fila */
+        grid-template-columns: 1fr; 
     }
     .carrito {
         margin-top: 20px;
