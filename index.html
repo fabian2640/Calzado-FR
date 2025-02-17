@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tienda Online</title>
+</head>
+<body>
+    <header>
+        <img src="tienda.jpg" alt="Tienda" class="banner">
+        <h1 class="nombre-tienda">CALZADO FR</h1>
+    </header>
+    
+    <main>
+        <section class="productos">
+            <h2 class="titulo-productos">Productos</h2>
+            <div class="producto" data-nombre="adidas" data-precio="289900">
+                <img src="tenis/adidas.jpg" alt="adidas" class="imagen-producto">
+                <h3>adidas</h3>
+                <p>Precio: $289.900</p>
+                <button class="agregar-al-carrito">Agregar al carrito</button>
+            </div>
+            <div class="producto" data-nombre="FILA" data-precio="229900">
+                <img src="tenis/fila.jpg" alt="FILA" class="imagen-producto">
+                <h3>FILA</h3>
+                <p>Precio: $229.900</p>
+                <button class="agregar-al-carrito">Agregar al carrito</button>
+            </div>
+            <div class="producto" data-nombre="Le Coq" data-precio="419900">
+                <img src="tenis/lecoq.jpg" alt="Le Coq" class="imagen-producto">
+                <h3>Le Coq</h3>
+                <p>Precio: $419.900</p>
+                <button class="agregar-al-carrito">Agregar al carrito</button>
+            </div>
+            <div class="producto" data-nombre="Nike" data-precio="189900">
+                <img src="tenis/nike.jpg" alt="Nike" class="imagen-producto">
+                <h3>Nike</h3>
+                <p>Precio: $189.900</p>
+                <button class="agregar-al-carrito">Agregar al carrito</button>
+            </div>
+            <div class="producto" data-nombre="PUMA" data-precio="199900">
+                <img src="tenis/puma.jpg" alt="PUMA" class="imagen-producto">
+                <h3>PUMA</h3>
+                <p>Precio: $199.900</p>
+                <button class="agregar-al-carrito">Agregar al carrito</button>
+            </div>
+        </section>
+
+        <aside class="carrito">
+            <h2>Carrito de Compras</h2>
+            <div id="items-carrito"></div>
+            <p id="precio-total">Total: $0</p>
+            <button id="pagar">Pagar</button>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
