@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url("./fonts/Mulish-Regular.ttf");
+}
+@font-face {
+    font-family: 'Mulish-bold';
+    src: url("./fonts/Mulish-Bold.ttf");
+}
+html,body{
+    font-family: 'Mulish', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    display: flex;
+    flex-flow: row wrap;
+}
+header{
+    background-color: #c1c1bd;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: row wrap;
+    box-sizing: border-box;
+}
+#logo{
+    flex: 1 1 100% ;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+#logo > img{
+    width: 200px;
+}
+header > nav{
+    flex: 1 1 100%;
+}
+header > nav > ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0px;
+    justify-content: space-around;
+    align-items: center ;
+    flex-flow: row nowrap;
+}
+header > nav > ul > li{
+    display: flex; 
+}
+header > nav > ul > li > a{
+    text-decoration: none;
+    color: #172235;
+}
+header > div:nth-of-type(2) > a > img{
+    display: none;
+}
+#banner{
+    background-image: url('./img/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    flex: 1 1 100%;
+    height: 260px;
+}
+#banner > div{
+    color: white;
+    flex: 1 1 100%;
+    text-align: center;
+    align-content: center;
+}
+#banner > div > h1{
+    font-size: 2.6rem;
+    margin: 0px;
+}
+#banner > div > p{
+    font-size: 1.2rem;
+    margin: 0px;
+}
+main{
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    background-color: #CACAC8;
+}
+main > h2{
+    text-align: center;
+    margin: 0.5rem 0px;
+    color: #42629a;
+    flex: 1 1 100%;
+}
+main > div:nth-of-type(1){
+    display: flex;
+    flex: 1 1 100%;
+}
+#filtros, #carrito{
+    flex: 1 1 50%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+#filtros > img, #carrito > img{
+    width: 25px;
+    height: 25px;
+    margin: 0px 8px;
+}
+#carrito{
+    justify-content: flex-end;
+}
+#filtros > div > a, #carrito > div > a{
+    color: #172235;
+    text-decoration: none;
+}
+.item{
+    display: flex;
+    box-sizing: border-box;
+    flex: 1 1 100%;
+    flex-flow: column nowrap;
+    padding: 1rem;
+}
+.producto{
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 100%;
+    background-color: white;
+    align-self: center;
+}
+.detalles{
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 100%;
+    box-sizing: border-box;
+}
+.detalles > img{
+    width: 210px;
+    height: 100px;
+    align-self: center;
+    margin-top: 15px;
+}
+.detalles > div{
+    margin-left: 1rem;
+}
+.detalles > div > h3{
+    margin: 0px 0px 10px 0px;
+    font-size: 1.2rem;
+}
+.detalles > div > h1{
+    margin: 5px 0px 0px 0px;
+}
+.detalles > div > span{
+    font-family: 'Mulish-bold';
+    font-size: 1.5rem;
+    color: #42629a;
+}
+.producto > button{
+    align-self: center;
+    background-color: #A89E94;
+    color: white;
+    font-size: 1.3rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    margin: 1rem 0px;
+}
+.producto > button:hover{
+    background-color: #7d756e;
+}
+footer{
+    display: flex;
+    flex: 1 1 100%;
+    background-color: #20304b;
+    color: white;
+    flex-flow: column nowrap;
+    text-align: center;
+    box-sizing: border-box;
+}
+#redes > a > img{
+    width: 40px;
+    height: 40px;
+}
+/* Tablets */
+@media (min-width:768px) {
+    #banner{
+        height: 330px;
+    }
+    main{
+        flex-flow: row wrap;
+    }
+    .item{
+        flex-flow: row wrap;
+        flex: 1 1 50%;
+    }
+    .producto{
+        width: 60%;
+    }
+    footer{
+        flex-flow: row wrap;
+    }
+    #info{
+        box-sizing: border-box;
+        flex: 1 1 50%;
+        text-align: left;
+        padding-left: 2rem;
+        align-content: center;
+        margin: 1.3rem 0px;
+    }
+    #info > p{
+        margin: 0px;
+    }
+    #redes{
+        flex: 1 1 50%;
+        align-content: center;
+    }
+    footer >p{
+        flex: 1 1 100%;
+        margin-top: 0px;
+    }
+}
+/* Laptops y computadores */
+@media (min-width:1024px) {
+    #logo{
+        flex: 1 1 20%;
+        margin: 0px;
+    }
+    header{
+        align-items: center;
+        position: fixed;
+        width: 100%;
+    }
+    header > nav{
+        flex: 1 1 60%;
+    }
+    header > div:nth-of-type(2){
+        display: flex;
+        flex: 1 1 20%;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        padding-right: 1rem;
+    }
+    header > div:nth-of-type(2) > a > img{
+        display: block;
+        width: 35px;
+    }
+    header > nav > ul{
+        justify-content: center;
+    }
+    header > nav > ul > li:nth-of-type(1), header > nav > ul > li:nth-of-type(2)  {
+        padding-right: 1rem;
+    }
+    #banner{
+        height: 480px;
+        margin-top: 3rem;
+    }
+    .item{
+        flex: 1 1 25%;
+    }
+    .producto{
+        width: 60%;
+        height: 100%;
+    }
+}
